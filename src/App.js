@@ -14,8 +14,9 @@ const App = () => {
       <NavBar />
       <div className='app-wrapper-content'>
         <Dialogs />
+        <Profile />
       </div>
-      <Profile />
+      
       </div>
   )
 }
