@@ -1,16 +1,14 @@
 import React from 'react';
-import MyPosts from './MyPosts/MyPosts';
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 import s from './Profile.module.css';
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-const Profile = () => {
-    return <div>
-            <div>
-                <img src="https://goarctic.ru/upload/iblock/444/4445f76ff7261804dfc52f8531daa7a4.jpg" width="600" alt="Text"/>
-            </div>
-            <div>
-                Ava + Decription
-    </div>
-            <MyPosts />
-        </div >
+const Profile = (props) => {
+    return (
+        <div className={s.profilePage}>
+            <ProfileInfo/>
+            <MyPostsContainer store={props.store} />
+        </div>
+    )
 }
 export default Profile;
